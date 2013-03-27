@@ -1,15 +1,15 @@
-go-hep/rand
-===========
+go-hep/random
+=============
 
-``rand`` is a set of random distribution functions (continous and discrete ones).
+``random`` is a set of random distribution functions (continous and discrete ones).
 
 ## Installation
 
 ```sh
-$ go get github.com/go-hep/rand
+$ go get github.com/go-hep/random
 ```
 
 ## Documentation
 
-http://godoc.org/github.com/go-hep/rand
+http://godoc.org/github.com/go-hep/random
 
