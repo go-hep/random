@@ -12,7 +12,7 @@ const (
 // Dist is a distribution function
 type Dist func() float64
 
-// DiscrDist a discrete distribution function
+// DiscrDist is a discrete distribution function
 type DiscrDist func() int64
 
 // Gauss returns a normally distributed float64 in the range
