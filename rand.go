@@ -11,8 +11,8 @@ type Dist func() float64
 // DiscrDist a discrete distribution function
 type DiscrDist func() int64
 
-// Gauss returns a normally distributed float64 in the range 
-// [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution of 
+// Gauss returns a normally distributed float64 in the range
+// [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution of
 // mean=mean and stddev=stddev.
 func Gauss(mean, stddev float64, src *rand.Source) Dist {
 	fct := func() float64 {
