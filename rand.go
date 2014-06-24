@@ -5,6 +5,10 @@ import (
 	"math/rand"
 )
 
+const (
+	halfPi = 0.5 * math.Pi
+)
+
 // Dist is a distribution function
 type Dist func() float64
 
@@ -108,6 +112,16 @@ func Binomial(n int64, p float64, src *rand.Source) DiscrDist {
 		return x
 	}
 	return DiscrDist(fct)
+}
+
+// Breit-Wigner
+func BreitWigner(flat Dist, mean, gamma float64, src *rand.Source) Dist {
+	fct := func() float64 {
+		rval := 2*flat() - 1
+		displ := 0.5 * gamma * math.Tan(rval*halfPi)
+		return mean + displ
+	}
+	return Dist(fct)
 }
 
 // EOF
